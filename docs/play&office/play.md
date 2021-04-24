@@ -41,6 +41,40 @@ echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 sudo pacman -S minecraft-launcher #我的世界官服起动器(ArchLinuxCN)
 ```
 
+但是比较了解我的世界的人都知道，官启比较难用，因为游戏配置上不太方便。我们推荐使用[HMCL](https://hmcl.huangyuhui.net/)（Hello Minecraft! Launcher）启动器
+
+[GitHub](https://github.com/huanghongxun/HMCL) [MCBBS](https://www.mcbbs.net/thread-142335-1-1.html)
+
+配置教程（注意：我们使用HMCL-3.3.172版本演示，其余版本类似）：
+
+我们先下载HMCL启动器本体：
+
+```bash
+aria2c http://ci.huangyuhui.net/job/HMCL/172/artifact/HMCL/build/libs/HMCL-3.3.172.jar
+```
+
+然后配置java，我们推荐使用Java8，因为HMCL仅支持Java8与Java10：
+
+``` bash
+yay -S jre8
+archlinux-java status
+sudo archlinux-java set java-8-jre/jre
+```
+
+启动：
+
+```bash
+java -jar HMCL-3.3.172.jar
+```
+
+如果要是能正常启动那就成功啦~~~
+
+我们也可以去安装社区上的HMCL，一般情况下不需要上面的配置：
+
+```bash
+sudo pacman -S hmcl
+```
+
 ## Steam
 
 群主的 SteamID: 144736794 。由于游戏实在太多，个人肯定无法完成购买全部。如有需要可以进行联络，群主可以测试在 Linux 上的可运行性。
